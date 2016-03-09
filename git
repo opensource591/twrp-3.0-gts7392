@@ -1,0 +1,12 @@
+#!/bin/bash
+rm -rf *.html~
+rm -rf *~
+git add .
+git status
+echo "Enter commit message"
+commit=""
+read commit
+git commit -m "$commit"
+git branch -m gh-pages
+git push origin gh-pages
+
